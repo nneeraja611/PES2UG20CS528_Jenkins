@@ -15,7 +15,14 @@ stages {
     
     stage('Deploy') {
       when {
-        
+          sh nvm
+        expression {
+          currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+        }
+      }
+      steps {
+        echo 'Deployment Successful'
+      }
     }
   }
   post {
