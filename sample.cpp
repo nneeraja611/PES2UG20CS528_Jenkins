@@ -1,4 +1,4 @@
-//File: hello.cpp
+//File: sample.cpp
 #include <iostream>
 using namespace std;
 
