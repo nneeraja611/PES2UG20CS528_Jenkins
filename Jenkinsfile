@@ -16,6 +16,7 @@ stages {
     stage('Deploy') {
       when {
         expression {
+            sh nvm
           currentBuild.result == null || currentBuild.result == 'SUCCESS' 
         }
       }
