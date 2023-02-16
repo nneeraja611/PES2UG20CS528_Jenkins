@@ -1,19 +1,18 @@
 pipeline {
-  agent any
-  stages {
+agent any
+stages {
     stage('Build') {
-      steps {
-        sh 'g++ main/sample.cpp -o output'
-        build 'PES2UG20CS528'
-        echo 'Build Successful'
-      }
+        steps {
+            sh 'g++ -o pes2ug20cs528-1 hello.cpp'
+        }
     }
+    
     stage('Test') {
-      steps {
-        sh './output'
-        echo 'Testing Successful'
-      }
+        steps {
+            sh './pes2ug20cs528-1'
+        }
     }
+    
     stage('Deploy') {
       when {
         expression {
