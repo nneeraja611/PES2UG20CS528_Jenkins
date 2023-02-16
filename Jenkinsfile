@@ -16,10 +16,7 @@ stages {
     stage('Deploy') {
       when {
         
-      }
-      steps {
-        echo 'Deployment Successful'
-      }
+      
     }
   }
   post {
